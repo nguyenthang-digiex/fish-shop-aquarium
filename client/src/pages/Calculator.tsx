@@ -1,24 +1,26 @@
 import { useState } from 'react';
-import KhCalculator from '../components/ui/KhCalculator';
+import MajorCalculator from '../components/ui/MajorCalculator';
+import { useTranslation } from '../context/LanguageContext';
 
 export default function CalculatorPage() {
-  const [activeTab, setActiveTab] = useState<'kh' | 'afr' | 'volume'>('kh');
+  const { t } = useTranslation();
+  const [activeTab, setActiveTab] = useState<'major' | 'afr' | 'volume'>(
+    'major',
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900 text-white">
       {/* Header */}
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <h1 className="mb-4 text-4xl font-bold">Reef Calculator</h1>
-        <p className="text-slate-400">
-          Công cụ tính toán thông minh dành cho người chơi reef.
-        </p>
+        <h1 className="mb-4 text-4xl font-bold">{t('calculator.title')}</h1>
+        <p className="text-slate-400">{t('calculator.subtitle')}</p>
       </div>
 
       {/* Tabs */}
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-8 flex gap-4">
           {[
-            { key: 'kh', label: 'KH Dosing' },
+            { key: 'major', label: 'Đa lượng' },
             { key: 'afr', label: 'AFR Consumption' },
             { key: 'volume', label: 'Tank Volume' },
           ].map((tab) => (
@@ -38,7 +40,7 @@ export default function CalculatorPage() {
 
         {/* Calculator Card */}
         <div className="rounded-2xl border border-slate-700 bg-slate-800/60 p-8 shadow-xl backdrop-blur-xl">
-          {activeTab === 'kh' && <KhCalculator />}
+          {activeTab === 'major' && <MajorCalculator />}
           {/*{activeTab === 'afr' && <AfrCalculator />}*/}
           {/*{activeTab === 'volume' && <VolumeCalculator />}*/}
         </div>

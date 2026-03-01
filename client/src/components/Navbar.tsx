@@ -37,7 +37,7 @@ function Navbar() {
           <a href="#" className="transition hover:text-cyan-400">
             {t('nav.knowledge')}
           </a>
-          <a href="#" className="transition hover:text-cyan-400">
+          <a href="/calculator" className="transition hover:text-cyan-400">
             {t('nav.calculator')}
           </a>
         </nav>
