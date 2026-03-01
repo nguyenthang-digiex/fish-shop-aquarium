@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import type { ButtonHTMLAttributes, ReactNode } from 'react';
 import clsx from 'clsx';
 
 type Variant = 'solid' | 'outline' | 'ghost';
@@ -58,7 +58,7 @@ export default function Button({
 
   return (
     <button
-      disabled={disabled || loading}
+      disabled={disabled || loading || false}
       className={clsx(
         base,
         sizes[size],

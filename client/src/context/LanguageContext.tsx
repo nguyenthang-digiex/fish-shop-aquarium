@@ -5,7 +5,7 @@ import {
   useEffect,
   useState,
 } from 'react';
-import { translations } from '../i18n/translations.ts';
+import { translations } from '../i18n/translations';
 
 type Language = 'vi' | 'en';
 

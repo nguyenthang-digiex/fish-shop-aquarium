@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { useLanguage } from '../../context/LanguageContext.tsx';
+import { useLanguage } from '../../context/LanguageContext';
 
 export default function LanguageDropdown() {
   const { language, setLanguage } = useLanguage();
@@ -16,8 +16,6 @@ export default function LanguageDropdown() {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
-
-  const currentLabel = language === 'vi' ? 'Tiếng Việt' : 'English';
 
   return (
     <>

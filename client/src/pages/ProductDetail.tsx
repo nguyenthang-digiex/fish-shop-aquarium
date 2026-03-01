@@ -1,4 +1,4 @@
 function ProductDetail() {
-  <div>test</div>;
+  return <div>test</div>;
 }
 export default ProductDetail;

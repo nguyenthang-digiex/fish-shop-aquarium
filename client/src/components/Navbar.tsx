@@ -1,6 +1,6 @@
 import { useLanguage, useTranslation } from '../context/LanguageContext';
 import { useState } from 'react';
-import LanguageDropdown from './ui/LanguageDropdown.tsx';
+import LanguageDropdown from './ui/LanguageDropdown';
 
 function Navbar() {
   const { language, setLanguage } = useLanguage();

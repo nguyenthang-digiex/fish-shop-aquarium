@@ -27,3 +27,4 @@ dist-ssr
 .env.local
 .vscode
 tsconfig.tsbuildinfo
+yarn.lock
