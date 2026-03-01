@@ -1,0 +1,15 @@
+[
+  {
+    "id": "acropora-tenuis-001",
+    "slug": "acropora-tenuis",
+    "name": "Acropora Tenuis",
+    "category": "coral",
+    "coralType": "SPS",
+    "difficulty": "hard",
+    "parMin": 250,
+    "parMax": 400,
+    "flow": "high",
+    "price": 1500000,
+    "createdAt": "2026-03-01"
+  }
+]
