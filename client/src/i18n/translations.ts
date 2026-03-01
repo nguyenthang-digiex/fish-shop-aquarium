@@ -12,7 +12,9 @@ export const translations = {
       description:
         'Nền tảng bán san hô, cá biển và công cụ tính toán chuyên sâu cho người chơi reef.',
       explore: 'Khám phá ngay',
-      reefCalc: 'Reef Calculator',
+      reefCalc: 'Máy tính san hô',
+      prominentCoral: 'San hô nổi bật',
+      prominentFish: 'Cá nổi bật',
     },
   },
   en: {
@@ -29,6 +31,8 @@ export const translations = {
         'A platform for corals, marine fish and advanced reef calculation tools.',
       explore: 'Explore Now',
       reefCalc: 'Reef Calculator',
+      prominentCoral: 'Prominent coral',
+      prominentFish: 'Prominent fish',
     },
   },
 };

@@ -11,3 +11,10 @@ export interface Product {
   price: number;
   createdAt: string;
 }
+
+export type ProductType = {
+  id: number;
+  title: string;
+  price: string;
+  image: string;
+};
