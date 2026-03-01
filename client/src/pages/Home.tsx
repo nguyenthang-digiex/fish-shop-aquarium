@@ -37,6 +37,7 @@ function Home() {
               title={item.title}
               price={item.price}
               image={item.image}
+              badge={item.badge}
             />
           ))}
         </Slider>
