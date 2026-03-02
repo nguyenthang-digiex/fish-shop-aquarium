@@ -18,3 +18,22 @@ export const reefConfig = {
     mg: { mixRatio: 400, tracePerLiter: 0, effect: 0.8 },
   },
 } as const;
+
+export const safetyLimits = {
+  kh: 1,
+  ca: 50,
+  mg: 100,
+};
+
+export const reefModes = {
+  mixed: {
+    khMaxPerDay: 1,
+    caMaxPerDay: 50,
+    mgMaxPerDay: 100,
+  },
+  sps: {
+    khMaxPerDay: 0.5,
+    caMaxPerDay: 30,
+    mgMaxPerDay: 50,
+  },
+};

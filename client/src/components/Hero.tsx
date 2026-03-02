@@ -18,7 +18,9 @@ function Hero() {
         <div className="flex gap-4">
           <Button>{t('hero.explore')}</Button>
 
-          <Button variant="outline">{t('hero.reefCalc')}</Button>
+          <Button variant="outline">
+            <a href="/calculator">{t('hero.reefCalc')}</a>
+          </Button>
         </div>
       </div>
     </section>

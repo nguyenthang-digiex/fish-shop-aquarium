@@ -25,7 +25,9 @@ function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <div className="text-xl font-bold text-cyan-400">🐠 Newbie Reefer</div>
+        <a href="/" className="text-xl font-bold text-cyan-400">
+          🐠 Newbie Reefer
+        </a>
 
         <nav className="hidden gap-6 text-sand md:flex">
           <a href="#" className="transition hover:text-cyan-400">
