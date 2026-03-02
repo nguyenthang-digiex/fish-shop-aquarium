@@ -1,7 +1,7 @@
 export type Brand = 'fauna' | 'aquaForest' | 'coralEssential';
 export type ElementType = 'kh' | 'ca' | 'mg';
 
-export const reefConfig = {
+export const reefConfig: any = {
   fauna: {
     kh: { mixRatio: 100, tracePerLiter: 0, effect: 0.05 },
     ca: { mixRatio: 400, tracePerLiter: 5, effect: 0.5 },
@@ -19,13 +19,13 @@ export const reefConfig = {
   },
 } as const;
 
-export const safetyLimits = {
+export const safetyLimits: any = {
   kh: 1,
   ca: 50,
   mg: 100,
 };
 
-export const reefModes = {
+export const reefModes: any = {
   mixed: {
     khMaxPerDay: 1,
     caMaxPerDay: 50,
