@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import MajorCalculator from '../components/ui/MajorCalculator';
 import { useTranslation } from '../context/LanguageContext';
+import AfrCalculator from '../components/ui/AfrCalculator';
 
 export default function CalculatorPage() {
   const { t } = useTranslation();
@@ -41,7 +42,7 @@ export default function CalculatorPage() {
         {/* Calculator Card */}
         <div className="rounded-2xl border border-slate-700 bg-slate-800/60 p-8 shadow-xl backdrop-blur-xl">
           {activeTab === 'major' && <MajorCalculator />}
-          {/*{activeTab === 'afr' && <AfrCalculator />}*/}
+          {activeTab === 'afr' && <AfrCalculator />}
           {/*{activeTab === 'volume' && <VolumeCalculator />}*/}
         </div>
       </div>
