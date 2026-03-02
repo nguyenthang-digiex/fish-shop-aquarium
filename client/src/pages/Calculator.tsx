@@ -2,12 +2,13 @@ import { useState } from 'react';
 import MajorCalculator from '../components/ui/MajorCalculator';
 import { useTranslation } from '../context/LanguageContext';
 import AfrCalculator from '../components/ui/AfrCalculator';
+import SaltCalculatorPage from '../components/ui/SaltCalculator';
 
 export default function CalculatorPage() {
   const { t } = useTranslation();
-  const [activeTab, setActiveTab] = useState<'major' | 'afr' | 'volume'>(
-    'major',
-  );
+  const [activeTab, setActiveTab] = useState<
+    'major' | 'afr' | 'salt' | 'volume'
+  >('major');
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900 text-white">
@@ -23,6 +24,7 @@ export default function CalculatorPage() {
           {[
             { key: 'major', label: 'Đa lượng' },
             { key: 'afr', label: 'AFR Consumption' },
+            { key: 'salt', label: 'Muối' },
             { key: 'volume', label: 'Tank Volume' },
           ].map((tab) => (
             <button
@@ -43,6 +45,7 @@ export default function CalculatorPage() {
         <div className="rounded-2xl border border-slate-700 bg-slate-800/60 p-8 shadow-xl backdrop-blur-xl">
           {activeTab === 'major' && <MajorCalculator />}
           {activeTab === 'afr' && <AfrCalculator />}
+          {activeTab === 'salt' && <SaltCalculatorPage />}
           {/*{activeTab === 'volume' && <VolumeCalculator />}*/}
         </div>
       </div>
