@@ -4,6 +4,7 @@ import Home from '../pages/Home';
 import ProductDetail from '../pages/ProductDetail';
 import CalculatorPage from '../pages/Calculator';
 import Login from '../pages/LoginPage';
+import Rewards from '../components/Rewards';
 
 export const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ export const router = createBrowserRouter([
       { path: 'products/:slug', element: <ProductDetail /> },
       { path: 'calculator', element: <CalculatorPage /> },
       { path: 'login', element: <Login /> },
+      { path: 'rewards', element: <Rewards /> },
     ],
   },
 ]);

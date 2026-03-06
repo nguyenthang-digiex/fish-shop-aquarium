@@ -69,7 +69,7 @@ export default function Footer() {
       </div>
       {/* PAYMENT */}
       <div className="border-t border-slate-800 pb-4 pt-6 text-center">
-        <div className="flex justify-center gap-4 opacity-70">
+        <div className="flex justify-center gap-4">
           <span className="text-sm text-sand">Visa</span>
           <span className="text-sm text-sand">MasterCard</span>
           <span className="text-sm text-sand">Bank Transfer</span>
