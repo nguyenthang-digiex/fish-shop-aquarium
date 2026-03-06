@@ -1,10 +1,17 @@
 import { FaFacebookF } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { FiSmartphone } from 'react-icons/fi';
+import LuckyWheel from '../components/LuckyWheel';
+import { useState } from 'react';
+import Button from '../components/ui/Button';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
+  const [showWheel, setShowWheel] = useState(false);
+  const navigate = useNavigate();
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-deep via-[#071a26] to-deep px-6">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-deep via-[#071a26] to-deep px-6 py-4">
       <div className="grid w-full max-w-5xl rounded-lg bg-sand shadow-xl md:grid-cols-2">
         {/* LOGIN */}
         <div className="border-r border-slate-200 p-10">
@@ -55,9 +62,12 @@ export default function Login() {
             </button>
           </div>
 
-          <button className="rounded bg-ocean px-6 py-3 font-semibold text-white transition hover:bg-600">
+          <Button
+            className="rounded bg-ocean px-6 py-3 font-semibold text-white transition hover:bg-600"
+            onClick={() => navigate('/')}
+          >
             ĐĂNG NHẬP
-          </button>
+          </Button>
 
           <p className="mt-6 cursor-pointer text-sm text-aqua hover:text-ocean">
             Quên mật khẩu?
@@ -122,10 +132,29 @@ export default function Login() {
             other purposes described in our chính sách riêng tư.
           </p>
 
-          <button className="rounded bg-ocean px-6 py-3 font-semibold text-white transition hover:bg-600">
+          <Button
+            className="rounded bg-ocean px-6 py-3 font-semibold text-white transition hover:bg-600"
+            onClick={() => setShowWheel(true)}
+          >
             ĐĂNG KÝ
-          </button>
+          </Button>
         </div>
+
+        {showWheel && (
+          <div
+            className="fixed inset-0 flex items-center justify-center bg-black/60"
+            onClick={() => {
+              setShowWheel(false);
+            }}
+          >
+            <div
+              className="rounded-lg bg-deep p-10"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <LuckyWheel />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
