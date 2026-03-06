@@ -46,6 +46,9 @@ function Navbar() {
 
         <div className="flex items-center gap-4">
           {/* LOGIN */}
+          <a href="/rewards" className="text-sand hover:text-aqua">
+            Điểm danh
+          </a>
           <a href="/login" className="text-sand hover:text-aqua">
             Đăng nhập
           </a>

@@ -29,9 +29,8 @@ export default function Rewards() {
       {/* DAILY CHECKIN */}
       <DailyCheckIn
         onUnlockWheel={handleOpenWheel}
-        streak={streak}
         setStreak={setStreak}
-        setPoints={setPoints}
+        addPoint={setPoints}
       />
 
       {/* SHOP */}
