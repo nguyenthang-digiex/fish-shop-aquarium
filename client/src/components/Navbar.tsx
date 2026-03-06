@@ -44,7 +44,15 @@ function Navbar() {
           </a>
         </nav>
 
-        <LanguageDropdown />
+        <div className="flex items-center gap-4">
+          {/* LOGIN */}
+          <a href="/login" className="text-sand hover:text-aqua">
+            Đăng nhập
+          </a>
+
+          {/* LANGUAGE */}
+          <LanguageDropdown />
+        </div>
       </div>
     </header>
   );
