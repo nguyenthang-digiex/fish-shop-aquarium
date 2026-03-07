@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 type DayStatus = 'pending' | 'done' | 'miss';
 
-const DAY = 24 * 60 * 60 * 1000; // test 10s
+const DAY = 24 * 60 * 60 * 1000;
 
 const rewards = [5, 5, 10, 10, 15, 20, 0];
 
